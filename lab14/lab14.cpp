@@ -11,7 +11,7 @@ int main()
     int pennies = 1;
     int remain;
     int amount;
-    double total;
+    long double total;
     
     cout<<"Input number of cents:"<<endl;
     cin>>amount;
@@ -28,6 +28,7 @@ int main()
     {
         quarters = 0;
     }
+    
     if (amount >= 10)
     {
         remain = amount%dimes;
@@ -38,6 +39,7 @@ int main()
     {
         dimes = 0;
     }
+    
     if (amount >= 5)
     {
         remain = amount%nickles;
@@ -48,6 +50,7 @@ int main()
     {
         nickles = 0;
     }
+    
     if (amount >= 1)
     {
         remain = amount%pennies;
@@ -58,6 +61,8 @@ int main()
     {
         pennies = 0;
     }
+    
+    
     cout<<"Quarters: "<<quarters<<endl;
     cout<<"Dimes: "<<dimes<<endl;
     cout<<"Nickles: "<<nickles<<endl;
