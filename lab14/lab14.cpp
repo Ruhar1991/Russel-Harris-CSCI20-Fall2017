@@ -62,11 +62,17 @@ int main()
         pennies = 0;
     }
     
-    
-    cout<<"Quarters: "<<quarters<<endl;
-    cout<<"Dimes: "<<dimes<<endl;
-    cout<<"Nickles: "<<nickles<<endl;
-    cout<<"Pennies: "<<pennies<<endl;
-    cout<<"Total: $"<<floor((total/100)*100+0.5)/100<<endl;
-    cout<<"Total after fee: $"<<floor(((total*0.81)/100)*100+0.5)/100<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Quarters:        |"<<quarters<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Dimes:           |"<<dimes<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Nickles:         |"<<nickles<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Pennies:         |"<<pennies<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Total:           |$"<<floor((total/100)*100+0.5)/100<<endl;
+    cout<<"|-----------------|-----------"<<endl;
+    cout<<"|Total after fee: |$"<<floor(((total*0.81)/100)*100+0.5)/100<<endl;
+    cout<<"|-----------------|-----------"<<endl;
 }
