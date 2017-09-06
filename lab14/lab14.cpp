@@ -1,3 +1,9 @@
+/*
+Author:         Russel Harris
+Date:           9/6/17
+Description:    Calculates the number coins in a number of cents. Gives dollar total and dollar total after 10.9% tax.
+*/
+
 #include <iostream>
 #include<math.h>
 using namespace std;
@@ -5,6 +11,7 @@ using namespace std;
  
 int main()
 {
+    //Variable declaration
     int quarters = 25;
     int dimes = 10;
     int nickles = 5;
@@ -13,11 +20,14 @@ int main()
     int amount;
     long double total;
     
+    //User inputs amount of cents
     cout<<"Input number of cents:"<<endl;
     cin>>amount;
     
+    //Total amount is the amount given
     total = amount;
     
+    //Check how many times each coin goes into the total if it can, then give the remainder to the next coin until all value is gone
     if (amount >= 25)
     {
         remain = amount%quarters;
@@ -62,6 +72,7 @@ int main()
         pennies = 0;
     }
     
+    //Output the quarters, dimes, nickles, pennies, total, and total after tax
     cout<<"|-----------------|-----------"<<endl;
     cout<<"|Quarters:        |"<<quarters<<endl;
     cout<<"|-----------------|-----------"<<endl;
