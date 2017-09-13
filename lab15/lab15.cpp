@@ -1,7 +1,7 @@
 /*
 Author:         Russel Harris
 Date:           9/6/17
-Description:    Calculates the number coins in a number of cents. Gives dollar total and dollar total after 10.9% tax.
+Description:    Adlib game where the user inputs parts of speech to have them output in a short story.
 */
 
 #include <iostream>
@@ -37,7 +37,7 @@ int main()
     string person4 = "person";
     string ingVerb2 = "verb ending in ING";
     
-    //User inputs amount of cents
+    //User gives what strings should be
     cout<<"Input a " << ingVerb1 <<endl;
     cin>>ingVerb1;
     cout<<"Input a " << holiday <<endl;
@@ -87,7 +87,7 @@ int main()
     cout<<"Input a " << ingVerb2 <<endl;
     cin>>ingVerb2;
     
-    
+    // Output
     cout<<"Okay, so I was " << ingVerb1 << "! I'm a kid, I'm supposed to snoop, especially around " << holiday << 
     " time! What " << person1 << " doesn't snoop? I just so happened to be in our " << place1 << 
     ". Normally I'm not up there, it's " << adj1 << " and " << adj2 << ". Plus there are " << animal << 
@@ -95,7 +95,7 @@ int main()
     ". Guess " << person2 << " didn't think I would " << verb1 << " it. I " << edVerb <<
     " it, it felt " << adj3 << ". Should I " << verb2 << " it? Looking closer I saw some " << noun2 << 
     ".  I got even closer and " << pastVerb << " a " << noun3 << "! The hidden " << noun4 << 
-    " was alive! A yelp came from the " << noun5 << ". I opened the " << noun6 << " and to my surprise a" << noun7 << 
+    " was alive! A yelp came from the " << noun5 << ". I opened the " << noun6 << " and to my surprise a " << noun7 << 
     " was inside! Guess who else was hidden in the " << place2 << "? " << person3 << " and " << person4 << 
-    " just knew I was" << ingVerb2 << "!" << endl;
+    " just knew I was " << ingVerb2 << "!" << endl;
 }
