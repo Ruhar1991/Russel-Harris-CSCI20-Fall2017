@@ -1,37 +1,34 @@
-//Create a struct for holding a stock portfolio.  It should hold the following information about stocks: stock name, sector, current share price, and number of shares owned.  The stock sector is a single character which specifies the type of company, according to the following code: 
-
-//A - Auto Companies
-
-//C - Consumer Products
-
-//F - Financial/Insurance
-
-//I - Industrial
-
-//T - Technology.
-
+/*
+Author:         Russel Harris
+Date:           9/6/17
+Description:    Struct-using program for holding and outputting stock portfolio information.
+*/
 #include <iostream>
 #include <string>
 using namespace std;
 
 
+
+//Struct for for stock data
 struct Stock
 {
     string name;
     char sector;
     double currentSharePrice;
-    double numberSharesOwned;
+    int numberSharesOwned;
 };
 
 
  
 int main()
 {
+    //Different stocks using Stock struct
     Stock stock1;
     Stock stock2;
     Stock stock3;
     Stock stock4;
     
+    //Getting user input for each of the 4 stocks
     cout<<"Enter data for stock1:"<<endl;
     cin>>stock1.name;
     cin>>stock1.sector;
@@ -52,7 +49,10 @@ int main()
     cin>>stock4.sector;
     cin>>stock4.currentSharePrice;
     cin>>stock4.numberSharesOwned;
-    cout<<"Stock Name | No of Shares | Current Value | Total Value"<<endl;
+    
+    
+    //Output data aquired from user, but neatly
+    cout<<"\nStock Name | No of Shares | Current Value | Total Value"<<endl;
     cout<<"----------------------------------------------------------"<<endl;
     cout<<stock1.name<<"       |     "<<stock1.currentSharePrice<<"      |      "
     <<stock1.numberSharesOwned<<"       |     "<<stock1.currentSharePrice*stock1.numberSharesOwned<<endl;
