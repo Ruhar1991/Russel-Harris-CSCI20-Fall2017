@@ -6,7 +6,6 @@ Description:    Output a person’s health statistics based on body weight in po
 
 
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
     
     //STRUCT FOR HEIGHT
@@ -29,7 +28,8 @@ int main()
     float dailyCalHB;
     float BMI;
     float weightPounds;
-    float ageYears;
+    int ageMonths;
+    int ageYears;
     double skittles = 4.28;
     
     //CREATING AN OBJECT OF STRUCT HEIGHT
@@ -55,19 +55,23 @@ int main()
     while(sex != "male" && sex != "female");
 
     //GET WEIGHT IN POUNDS FROM USER
-    cout<<"How many pounds do you weigh?"<<endl;
+    cout<<"How much do you weigh in pounds?"<<endl;
     cin>>weightPounds;
 
     //GET HEIGHT IN FEET AND INCHES FROM USER USING OBJECT INPUT
     cout<<"How tall are you in feet and inches? [type number in feet, a space, and number in inches]"<<endl;
     cin>>input.heightFeet>>input.heightInches;
 
-    //GET AGE IN YEARS FROM USER
-    cout<<"How many years old are you?"<<endl;
-    cin>>ageYears;
-    
     //USE HEIGHT IN FEET AND INCHES TO ALSO GET HEIGHT IN JUST INCHES FOR LATER MATH IN BMR FORMULAS
     input.heightJustInches = input.heightFeet * 12 + input.heightInches;
+    
+    //GET AGE IN MONTHS FROM USER
+    cout<<"How old are you in months?"<<endl;
+    cin>>ageMonths;
+    
+    ageYears = ageMonths%12;
+    ageYears = ageMonths - ageYears;
+    ageYears = ageYears/12;
     
     //HARRIS-BEN FORMULA FOR BMR
     if(sex == "male")
@@ -78,6 +82,7 @@ int main()
     {
         BMRHB  = 655 + (4.35 * weightPounds) + (4.7 * input.heightJustInches) - (4.7 * ageYears);
     }
+    
     //MIFFLIN-ST FORMULA
     if(sex == "male")
     {
@@ -154,6 +159,86 @@ int main()
     cout<<"| Skittles/day (HB)| "<<skittles<<endl;
     cout<<"|-----------------------------------------------"<<endl;
     cout<<"************************************************"<<endl;
-    
-    return 0;
 }
+
+/*
+************************************************
+|-----------------------------------------------
+| Name             | Sofia Cameron
+|------------------+----------------------------
+| Age              | 2 years old
+|------------------+----------------------------
+| Height           | 3ft 1in
+|------------------+----------------------------
+| Weight           | 35lbs
+|------------------+----------------------------
+| Daily kcals (HB) | 971.75 (Exercise: none)
+|------------------+----------------------------
+| Daily kcals (MS) | 575.466
+|------------------+----------------------------
+| BMI              | 17.973
+|------------------+----------------------------
+| Skittles/day (HB)| 227.044
+|-----------------------------------------------
+************************************************
+
+************************************************
+|-----------------------------------------------
+| Name             | Richard Watson
+|------------------+----------------------------
+| Age              | 6 years old
+|------------------+----------------------------
+| Height           | 3ft 8in
+|------------------+----------------------------
+| Weight           | 42lbs
+|------------------+----------------------------
+| Daily kcals (HB) | 845.66 (Exercise: none)
+|------------------+----------------------------
+| Daily kcals (MS) | 864.409
+|------------------+----------------------------
+| BMI              | 15.251
+|------------------+----------------------------
+| Skittles/day (HB)| 197.584
+|-----------------------------------------------
+************************************************
+
+************************************************
+|-----------------------------------------------
+| Name             | Heather Hunt
+|------------------+----------------------------
+| Age              | 26 years old
+|------------------+----------------------------
+| Height           | 5ft 10in
+|------------------+----------------------------
+| Weight           | 192lbs
+|------------------+----------------------------
+| Daily kcals (HB) | 1697 (Exercise: none)
+|------------------+----------------------------
+| Daily kcals (MS) | 1692.98
+|------------------+----------------------------
+| BMI              | 27.5461
+|------------------+----------------------------
+| Skittles/day (HB)| 396.495
+|-----------------------------------------------
+************************************************
+
+************************************************
+|-----------------------------------------------
+| Name             | Eddy Hall
+|------------------+----------------------------
+| Age              | 13 years old
+|------------------+----------------------------
+| Height           | 6ft 1in
+|------------------+----------------------------
+| Weight           | 590lbs
+|------------------+----------------------------
+| Daily kcals (HB) | 4580.4 (Exercise: none)
+|------------------+----------------------------
+| Daily kcals (MS) | 3780.69
+|------------------+----------------------------
+| BMI              | 77.8326
+|------------------+----------------------------
+| Skittles/day (HB)| 1070.19
+|-----------------------------------------------
+************************************************
+*/
