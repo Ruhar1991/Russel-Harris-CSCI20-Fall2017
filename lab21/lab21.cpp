@@ -35,7 +35,6 @@ int main(){
         difference *= -1;
     }
     
-    
     //OUTPUTS STARTING WIND SPEED, OLD FORMULA, NEW FORMULA, AND DIFFERENCE
     cout<<"\n********************************************"<<endl;
     cout<<"|-------------------------------------------"<<endl;
