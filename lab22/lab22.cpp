@@ -1,7 +1,7 @@
 /*
 Author:         Russel Harris
 Date:           9/25/17
-Description:    Outputs a random number.
+Description:    Outputs a random number between 1 and 100.
 */
 
 #include <iostream>
