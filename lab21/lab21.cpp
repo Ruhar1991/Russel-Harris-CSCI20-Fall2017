@@ -22,7 +22,7 @@ int main(){
     cin>>temp;
     
     //GET STARTING WIND SPEED INPUT
-    cout<<"Enter starting wind speed in mph"<<endl;
+    cout<<"Enter starting wind speed in mph:"<<endl;
     cin>>startingWindSpeed;
     
     //OLD AND NEW FORMULAS
